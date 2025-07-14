@@ -1,0 +1,141 @@
+.backBtnContainer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 60px;
+    padding-left: 50px;
+    overflow: hidden;
+    filter: opacity(0);
+    transition-duration: .6s;
+    transition-delay: .2s;
+}
+
+button.back{
+    width: max-content;
+    height: max-content;
+    border: none;
+    background: none;
+    font-weight: 600;
+    position: relative;
+    left: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.productContainer{
+    display: grid;
+    align-items: center;
+    font-weight: 600;
+    overflow: hidden;
+    transition: all .5s ease ;
+    width: calc(100vw / 4);
+    position: relative;  
+    justify-content: center;
+
+}
+
+.productImgContainer{
+    display: grid;
+    justify-content: center; 
+}
+
+img[alt^="productimg"]{
+    justify-self: center;
+    filter: drop-shadow(50px 25px 12px rgb(0, 0, 0, 0.4));
+    transform: translateY(15);
+}
+
+.backText{
+    font-size: clamp(10vw, 15vw, 620px);
+    position: absolute;
+    justify-self: center;
+    z-index: -1;
+    padding-top: 90px;
+    color: white;
+}
+
+.productContainer > article{
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+}
+
+.productContainer > article > div{
+    margin-left: -10px;
+}
+
+.productContainer small{
+    font-size: clamp(14px, 1vw, 1.5vw);
+}
+
+.productContainer h3{
+    width: 100%;
+    max-width: 80px;
+    font-size: clamp(20px, 25px, 2vw);
+}
+
+.productInfo{
+    min-width: max-content;
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.productInfo *{
+    transition: .5s;
+    
+}
+
+.bottomPrice{
+    position: fixed;
+    bottom: 0;
+    justify-self: center;
+    font-size: clamp(20px, 2vw, 25px);
+    text-shadow: 0px 0px 10px black;
+    backdrop-filter: blur(1px);
+}
+ 
+.infoData1{
+    position: absolute;
+    bottom: 0;
+    padding-left: 50px;
+}
+
+.productInfo p, .infoData1 p{
+    font-weight: 500;
+    overflow: hidden;
+}
+
+p[role="About"]{
+    width: 100%;
+    max-width: 310px;
+    font-size: clamp(12px, 10vw, 13px);
+}
+
+button[role='addToCart']{
+    aspect-ratio: 4/1;
+    padding: 5px;
+    width: 15vw;
+    max-width: 200px;
+    min-width: 100px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.407);
+    cursor: pointer;
+}
+
+button[role='addToCart']:active{
+    background-color: rgb(170, 168, 168);
+}
+
+
+@media(max-width: 600px){
+  .productContainer{
+    display: grid;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: calc(100vw / 2);
+    justify-self: center;
+    justify-content: center;
+  }
+}
+
